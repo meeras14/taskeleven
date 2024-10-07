@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Image with JavaScript</title>
+    <style>
+        /* CSS to add smooth transition for image opacity */
+        img {
+            transition: opacity 0.5s ease;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hover Over the Image to Make it Disappear</h1>
+    
+    <!-- Image element with the new balloons image -->
+    <img id="hoverImage" src="https://images.unsplash.com/photo-1563298723-dcfebaa392e3" alt="Balloons Image" width="300">
+
+    <script>
+        // Get the image element
+        const image = document.getElementById('hoverImage');
+
+        // Add event listener for when the mouse is over the image
+        image.addEventListener('mouseover', () => {
+            image.style.opacity = '0'; // Make image disappear by fading out
+        });
+
+        // Add event listener for when the mouse leaves the image area
+        image.addEventListener('mouseout', () => {
+            image.style.opacity = '1'; // Make image reappear by fading in
+        });
+    </script>
+</body>
+</html>
